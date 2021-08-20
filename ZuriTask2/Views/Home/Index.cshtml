@@ -1,0 +1,66 @@
+﻿@model ZuriTask2.Models.Form
+@{
+    ViewBag.Title = "Home Page";
+}
+
+    <div class="jumbotron">
+        <h1>Resume</h1>
+        <p class="lead">
+            I am an intermediate dot net developer;
+            Codes in C#
+            Good at writing web APis
+            Good Understanding of MVC architecture which makes collaboration easy faster and efficient.
+            I also write front-end; HTML, CSS and Boostrap
+            I have little understanding of Javascript.
+            In the past few months I have been working with a Fintech firm were I work directly with Developers to Deploy test and monitor Software solutions written with dot net framework.
+        </p>
+        <p style="background-color:white">I am currently an intern at <a href="https://training.zuri.team"><img src="~/img/zuri.png" /> &raquo;</a></p>
+
+
+        <h2>Contact Me</h2>
+
+        @using (Html.BeginForm("Create", "Home"))
+        {
+            <div class="form-group">
+                @Html.LabelFor(m => m.Name)
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Message)
+                @Html.TextAreaFor(m => m.Message, new { @class = "form-control" })
+                
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        }
+    </div>
+
+<div class="row">
+    <div class="col-md-4">
+        @*<h2>Getting started</h2>
+        <p>
+            I am an intermediate dot net developer;
+            Codes in C#
+            Write powerful web APis
+            Good Understanding of MVC architecture which makes collaboration easy faster and efficient.
+            I also write front-end; HTML, CSS and Boostrap
+            I have little understanding of Javascript.
+            In the past few months I have been working with a Fintech firm were I work directly with Developers to Deploy test and monitor Software solutions written with dot net framework.
+
+        </p>*@
+        @*<p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>*@
+    </div>
+    <div class="col-md-4">
+
+
+    </div>
+    <div class="col-md-4">
+        @*<h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>*@
+    </div>
+</div>
